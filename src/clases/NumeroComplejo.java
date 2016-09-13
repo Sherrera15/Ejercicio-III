@@ -6,62 +6,80 @@
 package clases;
 
 
-
 /**
  *
  * @author Herrera
  */
 public class NumeroComplejo {
     
-    private double real;
-    private double img;
+    private int real;
+    private int imag;
     
-    public NumeroComplejo (){
-      real = 0.0;
-      img = 0.0;
-    
+     public NumeroComplejo(int real, int imag) {
+        this.real = real;
+        this.imag= imag;
+        
     }
     
 
-     public NumeroComplejo (double real, double im){ 
-    
-         this.real = real;
-         img = im;
-        
-        }
-
-    public double getReal() {
+    public int getReal() {
         return real;
     }
 
-    public void setReal(double real) {
+    public void setReal(int real) {
         this.real = real;
     }
 
-    public double getImg() {
-        return img;
+    public int getImag() {
+        return imag;
     }
 
-    public void setImg(double img) {
-        this.img = img;
+    public void setImag(int imag) {
+        this.imag = imag;
     }
 
-    public NumeroComplejo suma(NumeroComplejo sumando){
-        NumeroComplejo resultado;
-        resultado = new NumeroComplejo();         
-        resultado.setReal(this.real + sumando.getReal() );         
-        resultado.setImg(this.img + sumando.getImg());      
-        return resultado;
     
+    public NumeroComplejo sumar (NumeroComplejo C2) {
+          NumeroComplejo R;
+              int r, i;
+        
+        r = this.real + C2.real;
+        i = this.imag + C2.imag;
+           R = new NumeroComplejo(r, i);
+              return R;
+        
+    }
+    
+      public NumeroComplejo restar(NumeroComplejo c2)  {
+        NumeroComplejo R;
+        int r, i;
+
+        r = this.real - c2.real;
+        i= this.imag - c2.imag;
+
+        R = new NumeroComplejo(r, i);
+            return R;
+
+    }
+       
+        public NumeroComplejo multiplicar (NumeroComplejo c2) {
+           NumeroComplejo R;
+            int r,i;
+           
+            r =(this.real * c2.real) - (this.imag * c2.imag);
+            i = (this.imag * c2.real) + (this.real * c2.imag);
+            
+            R = new NumeroComplejo (r,i);
+            return R;
+    }
+
+        
 }
-  public NumeroComplejo resta (NumeroComplejo resta){
-        NumeroComplejo resultado;
-        resultado = new NumeroComplejo();         
-        resultado.setReal(this.real - resta.getReal() );         
-        resultado.setImg(this.img - resta.getImg());         
-        return resultado;
-  }
- 
 
   
-}
+
+
+
+    
+  
+
