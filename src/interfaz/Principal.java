@@ -50,6 +50,7 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("JasmineUPC", 3, 36)); // NOI18N
@@ -76,21 +77,21 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setText("=");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, -1, -1));
 
-        cmdCalcular.setText("CALCULAR");
+        cmdCalcular.setText("Calcular");
         cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCalcularActionPerformed(evt);
             }
         });
-        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, -1, -1));
+        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 80, 30));
 
-        cmdBorrar.setText("BORRAR");
+        cmdBorrar.setText("Limpiar");
         cmdBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdBorrarActionPerformed(evt);
             }
         });
-        jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, -1, -1));
+        jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 80, 30));
 
         txtReal2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -108,6 +109,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.add(txtImag2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 60, -1));
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 70, 0));
 
+        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultado"));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -130,9 +132,7 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,51 +224,35 @@ public class Principal extends javax.swing.JFrame {
 
     private void txtReal1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtReal1KeyTyped
         char c=evt.getKeyChar(); 
-       
-          if(!Character.isDigit(c)&&evt.getKeyChar()!='-') {   
-            getToolkit().beep();    
-              evt.consume();   
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
           }
-    if(evt.getKeyChar()=='-'&&txtReal1.getText().contains("-")){
-        evt.consume();
-    } 
     }//GEN-LAST:event_txtReal1KeyTyped
 
     private void txtImag1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtImag1KeyTyped
         
-         char c=evt.getKeyChar(); 
-       
-          if(!Character.isDigit(c)&&evt.getKeyChar()!='-') {   
-            getToolkit().beep();    
-              evt.consume();   
+       char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
           }
-    if(evt.getKeyChar()=='-'&&txtImag1.getText().contains("-")){
-        evt.consume();
-    } 
     }//GEN-LAST:event_txtImag1KeyTyped
 
     private void txtReal2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtReal2KeyTyped
         char c=evt.getKeyChar(); 
-       
-          if(!Character.isDigit(c)&&evt.getKeyChar()!='-') {   
-            getToolkit().beep();    
-              evt.consume();   
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
           }
-    if(evt.getKeyChar()=='-'&&txtReal2.getText().contains("-")){
-        evt.consume();
-    } 
     }//GEN-LAST:event_txtReal2KeyTyped
 
     private void txtImag2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtImag2KeyTyped
        char c=evt.getKeyChar(); 
-       
-          if(!Character.isDigit(c)&&evt.getKeyChar()!='-') {   
-            getToolkit().beep();    
-              evt.consume();   
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
           }
-    if(evt.getKeyChar()=='-'&&txtImag2.getText().contains("-")){
-        evt.consume();
-    } 
     }//GEN-LAST:event_txtImag2KeyTyped
 
     /**
